@@ -15,7 +15,7 @@ public class CurrencyConverter {
     private static final Map<String, Double> exchangeRates = new HashMap<>();
 
     static {
-        // Initialize with some example currencies and their exchange rates against USD
+        // Initialize currencies and their exchange rates against USD
         exchangeRates.put("USD", 1.0); // USD to USD
 
         //Louis Smelcer
