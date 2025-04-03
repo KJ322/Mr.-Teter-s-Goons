@@ -17,20 +17,38 @@ public class CurrencyConverter {
     static {
         // Initialize with some example currencies and their exchange rates against USD
         exchangeRates.put("USD", 1.0); // USD to USD
-        exchangeRates.put("CVE", 99.77); // EUR to USD
-        exchangeRates.put("IRR", 42112.50); // GBP to USD
-        exchangeRates.put("MWK", 1733.99); // INR to USD
-        exchangeRates.put("ZAR", 18.76); // JPY to USD
-        exchangeRates.put("ILS", 3.70);
-        exchangeRates.put("SLL", 20969.50);
-        exchangeRates.put("IQD", 1309.88);
-        exchangeRates.put("DZD", 132.83);
-        exchangeRates.put("MAD", 9.50);
-        exchangeRates.put("KES", 129.25);
-        exchangeRates.put("SAR", 3.75);
-        exchangeRates.put("STN", 22.64);
-        exchangeRates.put("DJF", 177.94);
-        exchangeRates.put("LBP", 89596.90);
+
+        //Louis Smelcer
+        exchangeRates.put("CVE", 99.77); // CVS to USD
+        exchangeRates.put("IRR", 42112.50); // IRR to USD
+        exchangeRates.put("MWK", 1733.99); // MWK to USD
+        exchangeRates.put("ZAR", 18.76); // ZAR to USD
+        exchangeRates.put("ILS", 3.70); // ILS to USD
+        exchangeRates.put("SLL", 20969.50); // SLL to USD
+        exchangeRates.put("IQD", 1309.88); // IQD to USD
+        exchangeRates.put("DZD", 132.83); // DZD to USD
+        exchangeRates.put("MAD", 9.50); // MAD to USD
+        exchangeRates.put("KES", 129.25); // KES to USD
+        exchangeRates.put("SAR", 3.75); // SAR to USD
+        exchangeRates.put("STN", 22.64); // STN to USD
+        exchangeRates.put("DJF", 177.94); // DJF to USD
+        exchangeRates.put("LBP", 89596.90); // LBP to USD
+
+        //Katherine Jackson
+        exchangeRates.put("ZWL", 361.90); // ZWL to USD
+        exchangeRates.put("QAR", 3.64); // QAR to USD
+        exchangeRates.put("BHD", 0.376); // BHD to USD
+        exchangeRates.put("JOD", 0.709); // JOD to USD
+        exchangeRates.put("XOF", 594.94); // XOF to USD
+        exchangeRates.put("KWD", 0.30); // KWD to USD
+        exchangeRates.put("AFN", 71.60); // AFN to USD
+        exchangeRates.put("BIF", 2965.90); // BIF to USD
+        exchangeRates.put("MGA", 4642.89); // MGA to USD
+        exchangeRates.put("TND", 3.06); // TND to USD
+        exchangeRates.put("ERN", 15.00); // ERN to USD
+        exchangeRates.put("NGN", 1537.39); // NGN to USD
+        exchangeRates.put("GHS", 15.49); // GHS to USD
+        exchangeRates.put("LYD", 4.82); // LYD to USD
     }
 
     public static double convert(double amount, String fromCurrency, String toCurrency) {
