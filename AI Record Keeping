@@ -1,1 +1,236 @@
 What model, what was the prompt, and what did you get from it?
+
+ChatGPT:
+Prompt: Give me the base code for a currency converter, in JAVA, where it is scalable and any currency can convert to another one using USD as a baseline
+Output: import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+public class CurrencyConverter {
+    // A map to store currency exchange rates against USD
+    private static final Map<String, Double> exchangeRates = new HashMap<>();
+
+    static {
+        // Initialize with some example currencies and their exchange rates against USD
+        exchangeRates.put("USD", 1.0); // USD to USD
+        exchangeRates.put("EUR", 0.85); // EUR to USD
+        exchangeRates.put("GBP", 0.75); // GBP to USD
+        exchangeRates.put("INR", 74.0); // INR to USD
+        exchangeRates.put("JPY", 110.0); // JPY to USD
+        // Add more currencies as needed
+    }
+
+    public static double convert(double amount, String fromCurrency, String toCurrency) {
+        // Check if the provided currencies are valid
+        if (!exchangeRates.containsKey(fromCurrency) || !exchangeRates.containsKey(toCurrency)) {
+            throw new IllegalArgumentException("Invalid currency code.");
+        }
+
+        // Convert the amount to USD first
+        double amountInUSD = amount / exchangeRates.get(fromCurrency);
+
+        // Convert the USD amount to the target currency
+        return amountInUSD * exchangeRates.get(toCurrency);
+    }
+
+    public static void addCurrency(String currencyCode, double rateToUSD) {
+        exchangeRates.put(currencyCode, rateToUSD);
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Welcome to the Currency Converter!");
+
+        // Ask for the amount
+        System.out.print("Enter amount: ");
+        double amount = scanner.nextDouble();
+
+        // Ask for the from and to currencies
+        System.out.print("Enter source currency (e.g., USD, EUR, GBP): ");
+        String fromCurrency = scanner.next().toUpperCase();
+
+        System.out.print("Enter target currency (e.g., USD, EUR, GBP): ");
+        String toCurrency = scanner.next().toUpperCase();
+
+        try {
+            // Perform conversion
+            double convertedAmount = convert(amount, fromCurrency, toCurrency);
+            System.out.println(amount + " " + fromCurrency + " is equivalent to " + convertedAmount + " " + toCurrency);
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+        }
+
+ChatGPT
+Prompt: Now add into the code to use JOptionPane for a graphical pane.
+Output: import javax.swing.*;
+import java.util.HashMap;
+import java.util.Map;
+
+public class CurrencyConverter {
+    // A map to store currency exchange rates against USD
+    private static final Map<String, Double> exchangeRates = new HashMap<>();
+
+    static {
+        // Initialize with some example currencies and their exchange rates against USD
+        exchangeRates.put("USD", 1.0); // USD to USD
+        exchangeRates.put("EUR", 0.85); // EUR to USD
+        exchangeRates.put("GBP", 0.75); // GBP to USD
+        exchangeRates.put("INR", 74.0); // INR to USD
+        exchangeRates.put("JPY", 110.0); // JPY to USD
+        // Add more currencies as needed
+    }
+
+    public static double convert(double amount, String fromCurrency, String toCurrency) {
+        // Check if the provided currencies are valid
+        if (!exchangeRates.containsKey(fromCurrency) || !exchangeRates.containsKey(toCurrency)) {
+            throw new IllegalArgumentException("Invalid currency code.");
+        }
+
+        // Convert the amount to USD first
+        double amountInUSD = amount / exchangeRates.get(fromCurrency);
+
+        // Convert the USD amount to the target currency
+        return amountInUSD * exchangeRates.get(toCurrency);
+    }
+
+    public static void addCurrency(String currencyCode, double rateToUSD) {
+        exchangeRates.put(currencyCode, rateToUSD);
+    }
+
+    public static void main(String[] args) {
+        // Using JOptionPane for the GUI
+        String amountStr = JOptionPane.showInputDialog(null, "Enter the amount you want to convert:");
+        
+        if (amountStr == null || amountStr.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Amount is required.");
+            return;
+        }
+
+        double amount;
+        try {
+            amount = Double.parseDouble(amountStr);
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(null, "Please enter a valid number for the amount.");
+            return;
+        }
+
+        String fromCurrency = JOptionPane.showInputDialog(null, "Enter source currency (e.g., USD, EUR, GBP):").toUpperCase();
+        String toCurrency = JOptionPane.showInputDialog(null, "Enter target currency (e.g., USD, EUR, GBP):").toUpperCase();
+
+        try {
+            // Perform conversion
+            double convertedAmount = convert(amount, fromCurrency, toCurrency);
+            JOptionPane.showMessageDialog(null, String.format("%.2f %s is equivalent to %.2f %s", amount, fromCurrency, convertedAmount, toCurrency));
+        } catch (IllegalArgumentException e) {
+            JOptionPane.showMessageDialog(null, e.getMessage());
+        }
+    }
+}
+
+ChatGPT
+Prompt: Can you change th code so the source currency is the first thing entered in and all of the selections happen on the same window instead of multiple different windows
+Output: import javax.swing.*;
+import java.awt.*;
+import java.util.HashMap;
+import java.util.Map;
+
+public class CurrencyConverter {
+    // A map to store currency exchange rates against USD
+    private static final Map<String, Double> exchangeRates = new HashMap<>();
+
+    static {
+        // Initialize with some example currencies and their exchange rates against USD
+        exchangeRates.put("USD", 1.0); // USD to USD
+        exchangeRates.put("EUR", 0.85); // EUR to USD
+        exchangeRates.put("GBP", 0.75); // GBP to USD
+        exchangeRates.put("INR", 74.0); // INR to USD
+        exchangeRates.put("JPY", 110.0); // JPY to USD
+        // Add more currencies as needed
+    }
+
+    public static double convert(double amount, String fromCurrency, String toCurrency) {
+        // Check if the provided currencies are valid
+        if (!exchangeRates.containsKey(fromCurrency) || !exchangeRates.containsKey(toCurrency)) {
+            throw new IllegalArgumentException("Invalid currency code.");
+        }
+
+        // Convert the amount to USD first
+        double amountInUSD = amount / exchangeRates.get(fromCurrency);
+
+        // Convert the USD amount to the target currency
+        return amountInUSD * exchangeRates.get(toCurrency);
+    }
+
+    public static void addCurrency(String currencyCode, double rateToUSD) {
+        exchangeRates.put(currencyCode, rateToUSD);
+    }
+
+    public static void main(String[] args) {
+        // Create the main frame
+        JFrame frame = new JFrame("Currency Converter");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(400, 250);
+        frame.setLayout(new FlowLayout());
+
+        // Create a panel for the input fields
+        JPanel panel = new JPanel();
+        panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
+
+        // Create dropdown for source currency
+        String[] currencies = exchangeRates.keySet().toArray(new String[0]);
+        JComboBox<String> fromCurrencyComboBox = new JComboBox<>(currencies);
+        fromCurrencyComboBox.setSelectedIndex(0);  // Default selection
+
+        // Create dropdown for target currency
+        JComboBox<String> toCurrencyComboBox = new JComboBox<>(currencies);
+        toCurrencyComboBox.setSelectedIndex(1);  // Default selection for target currency
+
+        // Create text field for entering amount
+        JTextField amountField = new JTextField(10);
+
+        // Add components to the panel
+        panel.add(new JLabel("Amount to Convert:"));
+        panel.add(amountField);
+        panel.add(new JLabel("From Currency:"));
+        panel.add(fromCurrencyComboBox);
+        panel.add(new JLabel("To Currency:"));
+        panel.add(toCurrencyComboBox);
+
+        // Create convert button
+        JButton convertButton = new JButton("Convert");
+        panel.add(convertButton);
+
+        // Create result label
+        JLabel resultLabel = new JLabel("");
+        panel.add(resultLabel);
+
+        // Add panel to frame
+        frame.add(panel);
+        frame.setVisible(true);
+
+        // Handle the conversion when the button is clicked
+        convertButton.addActionListener(e -> {
+            String amountStr = amountField.getText();
+            double amount;
+            try {
+                amount = Double.parseDouble(amountStr);
+            } catch (NumberFormatException ex) {
+                resultLabel.setText("Invalid amount entered.");
+                return;
+            }
+
+            String fromCurrency = (String) fromCurrencyComboBox.getSelectedItem();
+            String toCurrency = (String) toCurrencyComboBox.getSelectedItem();
+
+            try {
+                // Perform the conversion
+                double convertedAmount = convert(amount, fromCurrency, toCurrency);
+                resultLabel.setText(String.format("%.2f %s is equivalent to %.2f %s", amount, fromCurrency, convertedAmount, toCurrency));
+            } catch (IllegalArgumentException ex) {
+                resultLabel.setText("Error: " + ex.getMessage());
+            }
+        });
+    }
+}
+
