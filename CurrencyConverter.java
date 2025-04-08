@@ -49,6 +49,22 @@ public class CurrencyConverter {
         exchangeRates.put("NGN", 1537.39); // NGN to USD
         exchangeRates.put("GHS", 15.49); // GHS to USD
         exchangeRates.put("LYD", 4.82); // LYD to USD
+
+        //Isaiah McNeill
+        exchangeRates.put("AOA", 921.163);// AOA to USD
+        exchangeRates.put("CDF", 2906.08);// CDF to USD
+        exchangeRates.put("GMD", 64.75);// GMD to USD
+        exchangeRates.put("GNF", 8676.76);// GNF to USD
+        exchangeRates.put("LSL", 19.2786);// LSL to USD
+        exchangeRates.put("MZN", 63.8874);// MZN to USD
+        exchangeRates.put("RWF", 1410.25);// RWF to USD
+        exchangeRates.put("SOS", 568.50);// SOS to USD
+        exchangeRates.put("SSP", 130.26);// SSP to USD
+        exchangeRates.put("SDG", 601.00);// SDG to USD
+        exchangeRates.put("TZS", 2686.45);// TZS to USD
+        exchangeRates.put("UGX", 3660.86);// UGX  to USD
+        exchangeRates.put("ZMW", 21.00);// ZMW to USD
+        exchangeRates.put("YER", 250.35);// YER to USD
     }
 
     public static double convert(double amount, String fromCurrency, String toCurrency) {
