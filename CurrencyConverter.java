@@ -34,6 +34,22 @@ public class CurrencyConverter {
         exchangeRates.put("DJF", 177.94); // DJF to USD
         exchangeRates.put("LBP", 89596.90); // LBP to USD
 
+        // Dayvion Peoples
+        exchangeRates.put("MRU", 39.88); // MRU to USD
+        exchangeRates.put("SYP", 13000.00); // SYP to USD
+        exchangeRates.put("AED", 3.67); // AED to USD
+        exchangeRates.put("EGP", 47.50); // EGP to USD
+        exchangeRates.put("XAF", 603.00); // XAF to USD
+        exchangeRates.put("NAD", 18.80); // NAD to USD
+        exchangeRates.put("LRD", 188.00); // LRD to USD
+        exchangeRates.put("BWP", 13.54); // BWP to USD
+        exchangeRates.put("KMF", 455.00); // KMF to USD
+        exchangeRates.put("SCR", 13.25); // SCR to USD
+        exchangeRates.put("SZL", 18.80); // SZL to USD
+        exchangeRates.put("MUR", 46.00); // MUR to USD
+        exchangeRates.put("ETB", 56.50); // ETB to USD
+        exchangeRates.put("OMR", 0.385); // OMR to USD
+
         //Katherine Jackson
         exchangeRates.put("ZWL", 361.90); // ZWL to USD
         exchangeRates.put("QAR", 3.64); // QAR to USD
