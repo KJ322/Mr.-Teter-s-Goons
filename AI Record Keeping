@@ -234,3 +234,26 @@ public class CurrencyConverter {
     }
 }
 
+ChatGPT
+Prompt: Use this code and change the exchange rates to these currencies: MRU (Mauritania), SYP (Syria), AED (UAE), EGP (Egypt), XAF (Central Africa CFA franc), NAD (Namibia), LRD (Liberia), BWP (Botswana), 
+KMF (Comoros), SCR (Seychelles), SZL (Swaziland), MUR (Mauritius), ETB (Ethiopia), OMR (Oman)
+Output: static {
+    // Exchange rates against USD
+    exchangeRates.put("USD", 1.0); // USD to USD
+
+    // Updated currencies
+    exchangeRates.put("MRU", 39.88); // Mauritania
+    exchangeRates.put("SYP", 13000.00); // Syria
+    exchangeRates.put("AED", 3.67); // UAE
+    exchangeRates.put("EGP", 47.50); // Egypt
+    exchangeRates.put("XAF", 603.00); // Central Africa CFA franc
+    exchangeRates.put("NAD", 18.80); // Namibia
+    exchangeRates.put("LRD", 188.00); // Liberia
+    exchangeRates.put("BWP", 13.54); // Botswana
+    exchangeRates.put("KMF", 455.00); // Comoros
+    exchangeRates.put("SCR", 13.25); // Seychelles
+    exchangeRates.put("SZL", 18.80); // Swaziland
+    exchangeRates.put("MUR", 46.00); // Mauritius
+    exchangeRates.put("ETB", 56.50); // Ethiopia
+    exchangeRates.put("OMR", 0.385); // Oman
+}
