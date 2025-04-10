@@ -7,11 +7,16 @@ public class currencyConverterFinal
     {
         //initializing arrays      
         String[] currencies = {
-            "USD", "CVE", "IRR", "MWK", "ZAR", "ILS", "SLL", "IQD", "DZD", "MAD", "KES", "SAR", 
-            "STN", "DJF", "LBP", "ZWL", "QAR", "BHD", "JOD", "XOF", "KWD", "AFN", "BIF", "MGA", 
-            "TND", "ERN", "NGN", "GHS", "LYD", "MRU", "SYP", "AED", "EGP", "XAF", "NAD", "LRD", 
-            "BWP", "KMF", "SCR", "SZL", "MUR", "ETB", "OMR", "AOA", "CDF", "GMD", "GNF", "LSL", 
-            "MZN", "RWF", "SOS", "SSP", "SDG", "TZS", "UGX", "ZMW", "YER"
+            "U.S Dollar", "Cape Verdean Escudo", "Iranian Rial", "Malawian Kwacha", "South African Rand", 
+            "Israeli New Shekel", "Sierra Leonean Leones", "Iraqi Dinar", "Algerian Dinar", "Moroccan Dirham", 
+            "Kenyan Shilling", "Saudi Riyal", "Sao Tomean Dobra", "Djinoutian Franc", "Lebanese Pound", "Zimbabwean Dollar", 
+            "Qatari Riyal", "Bahraini Dinar", "Jordanian Dinar", "West African CFA Franc", "Kuwaiti Dinar", "Afghan Afghani", 
+            "Burundian Franc", "Malagasy Ariary", "tunisian Dinar", "Eritrean Nafka", "Nigerian Naira", "Ghanaian Cedi", 
+            "Libyan Dinar","Mauritanian Ouguiya", "Syrian Pound", "United Arab Emirates Dirham", "Egyptian Pound", "Central African CFA Franc",
+            "Namibian Dollar", "Liberian Dollar", "Botswana Pula", "Comorian Franc", "Seychellios Rupee", "Swazi Lilangeni", 
+            "Mauritian Rupee", "Ethiopian Birr", "Omani Rial", "Angolan Kwanza", "Congolese Franc", "Gambian Dalasi", "Guinean Franc",
+            "Lesotho Loti", "Mozambican Metical", "Rwandan Franc", "Somali Shilling", "South Sudanese Pound", "Sudanezse Pound", "Tanzanian Shilling", 
+            "Ugandan Shilling", "Zambian Kwacha", "Yemeni Rial"
         };
 
         double[] rates = {
