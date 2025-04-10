@@ -1,7 +1,7 @@
 import java.awt.FlowLayout;
 import javax.swing.*;
 
-public class popUpWIndows 
+public class currencyConverterFinal
 {
     public static void main(String[] args) 
     {
