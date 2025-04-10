@@ -7,24 +7,29 @@ public class currencyConverterFinal
     {
         //initializing arrays      
         String[] currencies = {
-            "U.S Dollar", "Cape Verdean Escudo", "Iranian Rial", "Malawian Kwacha", "South African Rand", 
-            "Israeli New Shekel", "Sierra Leonean Leones", "Iraqi Dinar", "Algerian Dinar", "Moroccan Dirham", 
-            "Kenyan Shilling", "Saudi Riyal", "Sao Tomean Dobra", "Djinoutian Franc", "Lebanese Pound", "Zimbabwean Dollar", 
-            "Qatari Riyal", "Bahraini Dinar", "Jordanian Dinar", "West African CFA Franc", "Kuwaiti Dinar", "Afghan Afghani", 
-            "Burundian Franc", "Malagasy Ariary", "tunisian Dinar", "Eritrean Nafka", "Nigerian Naira", "Ghanaian Cedi", 
-            "Libyan Dinar","Mauritanian Ouguiya", "Syrian Pound", "United Arab Emirates Dirham", "Egyptian Pound", "Central African CFA Franc",
-            "Namibian Dollar", "Liberian Dollar", "Botswana Pula", "Comorian Franc", "Seychellios Rupee", "Swazi Lilangeni", 
-            "Mauritian Rupee", "Ethiopian Birr", "Omani Rial", "Angolan Kwanza", "Congolese Franc", "Gambian Dalasi", "Guinean Franc",
-            "Lesotho Loti", "Mozambican Metical", "Rwandan Franc", "Somali Shilling", "South Sudanese Pound", "Sudanezse Pound", "Tanzanian Shilling", 
-            "Ugandan Shilling", "Zambian Kwacha", "Yemeni Rial"
+           "Afghan Afghani (AFN)", "Algerian Dinar (DZD)", "Angolan Kwanza (AOA)", "Bahraini Dinar (BHD)",
+            "Botswana Pula (BWP)", "Burundian Franc (BIF)", "Cape Verdean Escudo (CVE)", "Central African CFA Franc (XAF)",
+            "Comorian Franc (KMF)", "Congolese Franc (CDF)", "Djiboutian Franc (DJF)", "Egyptian Pound (EGP)",
+            "Eritrean Nakfa (ERN)", "Ethiopian Birr (ETB)", "Gambian Dalasi (GMD)", "Ghanaian Cedi (GHS)",
+            "Guinean Franc (GNF)", "Iranian Rial (IRR)", "Iraqi Dinar (IQD)", "Israeli New Shekel (ILS)",
+            "Jordanian Dinar (JOD)", "Kenyan Shilling (KES)", "Kuwaiti Dinar (KWD)", "Lebanese Pound (LBP)",
+            "Lesotho Loti (LSL)", "Liberian Dollar (LRD)", "Libyan Dinar (LYD)", "Malagasy Ariary (MGA)",
+            "Malawian Kwacha (MWK)", "Mauritanian Ouguiya (MRU)", "Mauritian Rupee (MUR)", "Moroccan Dirham (MAD)",
+            "Mozambican Metical (MZN)", "Namibian Dollar (NAD)", "Nigerian Naira (NGN)", "Omani Rial (OMR)",
+            "Qatari Riyal (QAR)", "Rwandan Franc (RWF)", "Sao Tomean Dobra (STN)", "Saudi Riyal (SAR)",
+            "Seychellois Rupee (SCR)", "Sierra Leonean Leone (SLL)", "Somali Shilling (SOS)", "South African Rand (ZAR)",
+            "South Sudanese Pound (SSP)", "Swazi Lilangeni (SZL)", "Syrian Pound (SYP)", "Tunisian Dinar (TND)",
+            "U.S. Dollar (USD)", "United Arab Emirates Dirham (AED)", "West African CFA Franc (XOF)", "Zimbabwean Dollar (ZWL)"
         };
 
         double[] rates = {
-            1.0, 99.77, 42112.50, 1733.99, 18.76, 3.70, 20969.50, 1309.88, 132.83, 9.50, 129.25, 
-            3.75, 22.64, 177.94, 89596.90, 361.90, 3.64, 0.376, 0.709, 594.94, 0.30, 71.60, 2965.90, 
-            4642.89, 3.06, 15.00, 1537.39, 15.49, 4.82, 39.88, 13000.00, 3.67, 47.50, 603.00, 18.80, 
-            46.00, 56.50, 0.385, 921.163, 2906.08, 64.75, 8676.76, 19.2786, 63.8874, 1410.25, 568.50, 
-            130.26, 601.00, 2686.45, 3660.86, 21.00, 250.35
+            71.60, 132.83, 63.8874, 0.376, 56.50, 2965.90, 99.77, 603.00,
+            0.385, 1410.25, 177.94, 47.50, 15.00, 8676.76, 568.50, 15.49,
+            130.26, 42112.50, 1309.88, 3.70, 0.709, 129.25, 0.30, 89596.90,
+            601.00, 46.00, 4.82, 4642.89, 1733.99, 39.88, 64.75, 9.50,
+            2686.45, 18.80, 1537.39, 19.2786, 3.64, 3660.86, 22.64, 3.75,
+            921.163, 20969.50, 21.00, 18.76, 250.35, 2906.08, 13000.00, 3.06,
+            1.00, 3.67, 594.94, 361.90
         };
 
         //creating the frame
