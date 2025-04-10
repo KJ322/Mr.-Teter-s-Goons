@@ -5,9 +5,9 @@ public class currencyConverterFinal
 {
     public static void main(String[] args) 
     {
-        //initializing arrays      
+        //initializing arrays    
         String[] currencies = {
-           "Afghan Afghani (AFN)", "Algerian Dinar (DZD)", "Angolan Kwanza (AOA)", "Bahraini Dinar (BHD)",
+            "Afghan Afghani (AFN)", "Algerian Dinar (DZD)", "Angolan Kwanza (AOA)", "Bahraini Dinar (BHD)",
             "Botswana Pula (BWP)", "Burundian Franc (BIF)", "Cape Verdean Escudo (CVE)", "Central African CFA Franc (XAF)",
             "Comorian Franc (KMF)", "Congolese Franc (CDF)", "Djiboutian Franc (DJF)", "Egyptian Pound (EGP)",
             "Eritrean Nakfa (ERN)", "Ethiopian Birr (ETB)", "Gambian Dalasi (GMD)", "Ghanaian Cedi (GHS)",
@@ -21,7 +21,7 @@ public class currencyConverterFinal
             "South Sudanese Pound (SSP)", "Swazi Lilangeni (SZL)", "Syrian Pound (SYP)", "Tunisian Dinar (TND)",
             "U.S. Dollar (USD)", "United Arab Emirates Dirham (AED)", "West African CFA Franc (XOF)", "Zimbabwean Dollar (ZWL)"
         };
-
+        
         double[] rates = {
             71.60, 132.83, 63.8874, 0.376, 56.50, 2965.90, 99.77, 603.00,
             0.385, 1410.25, 177.94, 47.50, 15.00, 8676.76, 568.50, 15.49,
@@ -92,7 +92,7 @@ public class currencyConverterFinal
             {
                 //performs conversion
                 double convertedAmount = convert(amount, sourceCurrency, targetCurrency, rates, currencies);
-                resultLabel.setText(String.format("%.2f %s is equivalent to %.2f %s", amount, sourceCurrency, convertedAmount, targetCurrency));
+                JOptionPane.showMessageDialog(null, String.format("%.2f %s is equivalent to %.2f %s", amount, sourceCurrency, convertedAmount, targetCurrency));
             }
             catch (IllegalArgumentException ex)
             {
