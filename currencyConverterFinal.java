@@ -91,9 +91,20 @@ public class currencyConverterFinal
 
             try
             {
-                //performs conversion
-                double convertedAmount = convert(amount, sourceCurrency, targetCurrency, rates, currencies);
-                JOptionPane.showMessageDialog(null, String.format("%.2f %s is equivalent to %.2f %s", amount, sourceCurrency, convertedAmount, targetCurrency));
+                if(sourceCurrencyDropdown.getSelectedItem() == targetCurrencyDropdown.getSelectedItem())
+                {
+                    JOptionPane.showMessageDialog(null, "Must choose two different types of currencies.", "Currency Converter",JOptionPane.ERROR_MESSAGE);
+                }
+               if(amount > 0 && sourceCurrencyDropdown.getSelectedItem() != targetCurrencyDropdown.getSelectedItem())
+                {
+                    //performs conversion
+                    double convertedAmount = convert(amount, sourceCurrency, targetCurrency, rates, currencies);
+                    JOptionPane.showMessageDialog(null, String.format("%.2f %s is equivalent to %.2f %s", amount, sourceCurrency, convertedAmount, targetCurrency));
+                }
+                else if(amount < 0)
+                {
+                    JOptionPane.showMessageDialog(null, "Must enter an amount that's greater than 0.", "Currency Converter",JOptionPane.ERROR_MESSAGE);
+                }
             }
                 //question to run again
                 int response = JOptionPane.showConfirmDialog(null, "Do you want to convert another amount?", "Play Again", JOptionPane.YES_NO_OPTION);
