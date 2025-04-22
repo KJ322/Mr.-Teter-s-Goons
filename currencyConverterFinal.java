@@ -101,30 +101,31 @@ public class currencyConverterFinal
                     double convertedAmount = convert(amount, sourceCurrency, targetCurrency, rates, currencies);
                     JOptionPane.showMessageDialog(null, String.format("%.2f %s is equivalent to %.2f %s", amount, sourceCurrency, convertedAmount, targetCurrency));
                 }
-                else if(amount < 0)
+                else if(amount <= 0)
                 {
                     JOptionPane.showMessageDialog(null, "Must enter an amount that's greater than 0.", "Currency Converter",JOptionPane.ERROR_MESSAGE);
                 }
-            }
-                //question to run again
-                int response = JOptionPane.showConfirmDialog(null, "Do you want to convert another amount?", "Play Again", JOptionPane.YES_NO_OPTION);
-            if (response == JOptionPane.YES_OPTION) {
-                amountField.setText("");
-                sourceCurrencyDropDown.setSelectedIndex(0);
-                targetCurrencyDropDown.setSelectedIndex(1);
-                resultLabel.setText("");
-            } else {
-                frame.dispose(); //closes the window
-            }
             }
             catch (IllegalArgumentException ex)
             {
                 resultLabel.setText("Error: " + ex.getMessage());
             }
+                //question to run again
+                int response = JOptionPane.showConfirmDialog(null, "Do you want to convert another amount?", "Play Again", JOptionPane.YES_NO_OPTION);
+            if (response == JOptionPane.YES_OPTION) {
+                amountField.setText("");
+                sourceCurrencyDropdown.setSelectedIndex(0);
+                targetCurrencyDropdown.setSelectedIndex(1);
+                resultLabel.setText("");
+            } else {
+                frame.dispose(); //closes the window
+            } 
         });
     }
+        
     
-    public static double convert(double amount, String sourceCurrency, String targetCurrency, double[] rates, String[] currencies){
+    public static double convert(double amount, String sourceCurrency, String targetCurrency, double[] rates, String[] currencies)
+    {
         int fromIndex = getCurrencyIndex(sourceCurrency, currencies);
         int toIndex = getCurrencyIndex(targetCurrency, currencies);
 
@@ -144,7 +145,8 @@ public class currencyConverterFinal
         return amountInUSD * rateTo * commissionOut;
     }
 
-    public static int getCurrencyIndex(String currency, String[] currencies){
+    public static int getCurrencyIndex(String currency, String[] currencies)
+    {
         for (int i = 0; i < currencies.length; i++){
             if (currencies[i].equalsIgnoreCase(currency)) {
                 return i;
@@ -153,3 +155,5 @@ public class currencyConverterFinal
         return -1;
     }
 }
+    
+
