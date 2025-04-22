@@ -95,7 +95,7 @@ public class currencyConverterFinal
                 double convertedAmount = convert(amount, sourceCurrency, targetCurrency, rates, currencies);
                 JOptionPane.showMessageDialog(null, String.format("%.2f %s is equivalent to %.2f %s", amount, sourceCurrency, convertedAmount, targetCurrency));
             }
-                //question to play again
+                //question to run again
                 int response = JOptionPane.showConfirmDialog(null, "Do you want to convert another amount?", "Play Again", JOptionPane.YES_NO_OPTION);
             if (response == JOptionPane.YES_OPTION) {
                 amountField.setText("");
