@@ -110,16 +110,22 @@ public class currencyConverterFinal
             {
                 resultLabel.setText("Error: " + ex.getMessage());
             }
-                //question to run again
+            //question to run again
+            
+            
+            if(amount > 0 && sourceCurrencyDropdown.getSelectedItem() != targetCurrencyDropdown.getSelectedItem()) 
+            {
                 int response = JOptionPane.showConfirmDialog(null, "Do you want to convert another amount?", "Play Again", JOptionPane.YES_NO_OPTION);
-            if (response == JOptionPane.YES_OPTION) {
-                amountField.setText("");
-                sourceCurrencyDropdown.setSelectedIndex(0);
-                targetCurrencyDropdown.setSelectedIndex(1);
-                resultLabel.setText("");
-            } else {
-                frame.dispose(); //closes the window
-            } 
+                if (response == JOptionPane.YES_OPTION) {
+                    amountField.setText("");
+                    sourceCurrencyDropdown.setSelectedIndex(0);
+                    targetCurrencyDropdown.setSelectedIndex(1);
+                    resultLabel.setText("");
+                } else {
+                    frame.dispose(); //closes the window
+                } 
+            }
+            
         });
     }
         
